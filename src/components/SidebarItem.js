@@ -7,7 +7,7 @@ const MenuItem = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;
-  color: gray; /* 기본 텍스트 색상은 회색으로 설정 */
+  color: gray; /* 기본 텍스트, 아이콘 색상은 회색으로 설정 */
 `;
 
 const Icon = styled.div`
