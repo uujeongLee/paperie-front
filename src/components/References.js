@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Button from 'react-bootstrap/Button';
 import "./table.css";
+import copy_img from "../assets/copy_img.png"
 
 function References() {
   const handleCopyClipBoard = (text: string) => {
@@ -30,7 +31,7 @@ function References() {
           <td>
             <button type="button" className="copy_button" onClick={() => handleCopyClipBoard(document.getElementById("apaResult").innerHTML)}>
               <div>
-                <img class="copy_img" src="./image/copy_img.png"/>
+                <img class="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
@@ -42,7 +43,7 @@ function References() {
           <td>
             <button type="button" className="copy_button" onClick={() => handleCopyClipBoard(document.getElementById("chicagoResult").innerHTML)}>
               <div>
-                <img class="copy_img" src="./image/copy_img.png"/>
+                <img class="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
@@ -54,7 +55,7 @@ function References() {
           <td>
             <button type="button" className="copy_button" onClick={() => handleCopyClipBoard(document.getElementById("mlaResult").innerHTML)}>
               <div>
-                <img class="copy_img" src="./image/copy_img.png"/>
+                <img class="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
@@ -67,7 +68,7 @@ function References() {
             <button type="button" className="copy_button"
             onClick={() => handleCopyClipBoard(document.getElementById("vancouverResult").innerHTML)}>
               <div>
-                <img class="copy_img" src="./image/copy_img.png"/>
+                <img class="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>

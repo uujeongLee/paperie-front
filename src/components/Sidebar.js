@@ -7,6 +7,7 @@ import styled from "styled-components";
 import SidebarItem from "./SidebarItem";
 import paperielogo from "../assets/paperielogo.png";
 
+
 // 아이콘 import
 import { BsFileEarmarkText } from "react-icons/bs";
 import { GrArticle } from "react-icons/gr";
