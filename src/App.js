@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import MyList from "./pages/MyList";
 import TopBar from "./components/TopBar";
 import Hello from "./components/Hello"; //Hello 컴포넌트를 가져오도록 수정
+import References from "./components/References"; //테이블
 
 import 'bootstrap/dist/css/bootstrap.min.css'; //부트스트랩 import
 
@@ -37,6 +38,7 @@ class App extends React.Component {
           <ContentContainer>
             <TopBar />
             <Hello />
+            <References />
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/mylist" component={MyList} />
