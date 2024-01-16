@@ -11,10 +11,11 @@ import paperielogo from "../assets/paperielogo.png";
 // 아이콘 import
 import { BsFileEarmarkText } from "react-icons/bs";
 import { GrArticle } from "react-icons/gr";
-import { HiPaperClip, HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { GoLaw } from "react-icons/go";
 import { BiHelpCircle } from "react-icons/bi";
 import { IoBookOutline } from "react-icons/io5";
+
 
 const Side = styled.div`
   display: flex;
@@ -22,6 +23,9 @@ const Side = styled.div`
   flex-direction: column;
   align-items: center;
   width: 20%;
+  height: 110vh; /* 화면 전체 높이로 설정 */
+  //margin-right: 10%;
+  background-color: purple; /* 배경색을 여기에 지정하세요 */
 `;
 
 const Logo = styled.img`
