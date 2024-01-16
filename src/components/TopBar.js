@@ -9,7 +9,7 @@ const TopBarWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   padding: 10px 20px;
-  background-color: white;
+  background-color: #FAFBFF;
 `;
 
 // const Button = styled.button`
