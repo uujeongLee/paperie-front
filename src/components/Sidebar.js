@@ -11,21 +11,12 @@ import paperielogo from "../assets/paperielogo.png";
 // 아이콘 import
 import { BsFileEarmarkText } from "react-icons/bs";
 import { GrArticle } from "react-icons/gr";
-import { HiPaperClip, HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { GoLaw } from "react-icons/go";
 import { BiHelpCircle } from "react-icons/bi";
 import { IoBookOutline } from "react-icons/io5";
 
 
-// const Side = styled.div`
-//   display: flex;
-//   border-right: 1px solid #e0e0e0;
-//   flex-direction: column;
-//   align-items: center;
-//   width: 20%;
-//   height: 120vh; /* 화면 전체 높이로 설정 */
-//   margin-right : 10%
-// `;
 const Side = styled.div`
   display: flex;
   border-right: 1px solid #e0e0e0;

@@ -7,34 +7,28 @@ import Sidebar from "./components/Sidebar";
 import TopBar from "./components/TopBar";
 import Search from "./components/search";
 import References from "./components/References";
-
 import 'bootstrap/dist/css/bootstrap.min.css'; // 부트스트랩 임포트
 
-const AppContainer = styled.div`
-  display: flex;
-  height: 100vh;
-`;
-
-const SidebarContainer = styled.div`
-  width: 20%;
-  background-color: purple;
-`;
+// const SidebarContainer = styled.div`
+//   width: 20%;
+//   background-color: purple;
+// `;
 
 const ContentContainer = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: orange;
+  background-color: orange;    /*배경색: 주황색(임의)*/
   padding: 20px;
 `;
 
 const SearchContainer = styled.div`
-  margin-left: 50px; /* 필요에 따라 여백 조절 */
+  margin-left: 50px; /* 사이드바와의 거리 */
   flex-direction: column;
 `;
 
 const ReferencesContainer = styled.div`
-  margin-left: 50px; /* 필요에 따라 여백 조절 */
+  margin-left: 50px; /* 사이드바와의 거리 */
 `;
 
 class App extends React.Component {
@@ -44,10 +38,13 @@ class App extends React.Component {
           <Sidebar />
           <ContentContainer>
             <TopBar />
-            <SearchContainer><Search/></SearchContainer>
-
-            <ReferencesContainer><References /></ReferencesContainer>
-            {/*<References />
+            <SearchContainer> 
+              <Search/> 
+            </SearchContainer>
+            <ReferencesContainer> 
+              <References /> 
+            </ReferencesContainer>
+            {/*
               <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/mylist" component={MyList} />
