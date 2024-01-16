@@ -18,17 +18,18 @@ const ContentContainer = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: orange;    /*배경색: 주황색(임의)*/
+  background-color: #FAFBFF;    /*배경색: 연한 하늘색*/
+  /*background-color: #F5F6FB;*/
   padding: 20px;
 `;
 
 const SearchContainer = styled.div`
-  margin-left: 50px; /* 사이드바와의 거리 */
+  margin-left: 70px; /* 사이드바와의 거리 */
   flex-direction: column;
 `;
 
 const ReferencesContainer = styled.div`
-  margin-left: 50px; /* 사이드바와의 거리 */
+  margin-left: 70px; /* 사이드바와의 거리 */
 `;
 
 class App extends React.Component {

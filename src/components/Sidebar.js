@@ -25,8 +25,9 @@ const Side = styled.div`
   width: 20%;
   height: 110vh; /* 화면 전체 높이로 설정 */
   //margin-right: 10%;
-  background-color: purple; /* 배경색을 여기에 지정하세요 */
+  background-color: white; /* 배경색을 여기에 지정하세요 */
 `;
+
 
 const Logo = styled.img`
   width: 140px;
