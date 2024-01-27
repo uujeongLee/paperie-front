@@ -55,7 +55,7 @@ function References() {
           <td>
             <button type="button" className="copy_button" onClick={() => handleCopyClipBoard(document.getElementById("apaResult").innerHTML)}>
               <div>
-                <img class="copy_img" src={copy_img}/>
+                <img className="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
@@ -67,7 +67,7 @@ function References() {
           <td>
             <button type="button" className="copy_button" onClick={() => handleCopyClipBoard(document.getElementById("chicagoResult").innerHTML)}>
               <div>
-                <img class="copy_img" src={copy_img}/>
+                <img className="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
@@ -79,7 +79,7 @@ function References() {
           <td>
             <button type="button" className="copy_button" onClick={() => handleCopyClipBoard(document.getElementById("mlaResult").innerHTML)}>
               <div>
-                <img class="copy_img" src={copy_img}/>
+                <img className="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
@@ -92,7 +92,7 @@ function References() {
             <button type="button" className="copy_button"
             onClick={() => handleCopyClipBoard(document.getElementById("vancouverResult").innerHTML)}>
               <div>
-                <img class="copy_img" src={copy_img}/>
+                <img className="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
