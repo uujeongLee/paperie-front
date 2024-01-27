@@ -7,6 +7,7 @@ import Sidebar from "./components/Sidebar";
 import TopBar from "./components/TopBar";
 import Search_article from "./components/search_article";
 import References from "./components/References";
+import Result from "./components/Result";
 import 'bootstrap/dist/css/bootstrap.min.css'; // 부트스트랩 임포트
 
 // const SidebarContainer = styled.div`
@@ -28,6 +29,10 @@ const SearchContainer = styled.div`
   flex-direction: column;
 `;
 
+const ResultContainer = styled.div`
+  margin-left: 70px; /* 사이드바와의 거리 */
+`;
+
 const ReferencesContainer = styled.div`
   margin-left: 70px; /* 사이드바와의 거리 */
 `;
@@ -42,6 +47,9 @@ class App extends React.Component {
             <SearchContainer> 
               <Search_article/> 
             </SearchContainer>
+            <ResultContainer>
+              <Result/>
+            </ResultContainer>
             <ReferencesContainer> 
               <References /> 
             </ReferencesContainer>
