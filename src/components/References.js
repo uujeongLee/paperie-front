@@ -5,6 +5,7 @@ import copy_img from "../assets/copy_img.png"
 import { motion, useAnimation } from 'framer-motion';
 
 function References() {
+
   const controls = useAnimation();
 
   useEffect(() => {
@@ -22,6 +23,7 @@ function References() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [controls]);
+
 
   const handleCopyClipBoard = (text) => {
     try {
