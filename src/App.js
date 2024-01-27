@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { BrowserRouter } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import TopBar from "./components/TopBar";
-import Search from "./components/search";
+import Search_article from "./components/search_article";
 import References from "./components/References";
 import Result from "./components/Result";
 import 'bootstrap/dist/css/bootstrap.min.css'; // 부트스트랩 임포트
@@ -45,7 +45,7 @@ class App extends React.Component {
           <ContentContainer>
             <TopBar />
             <SearchContainer> 
-              <Search/> 
+              <Search_article/> 
             </SearchContainer>
             <ResultContainer>
               <Result/>
