@@ -11,7 +11,7 @@ function References() {
     const handleScroll = () => {
       // 스크롤 위치에 따라 애니메이션 컨트롤
       const scrollY = window.scrollY;
-      controls.start({ opacity: scrollY > 50 ? 1 : 0.5 }); // 스크롤 위치에 따라 opacity 조절
+      controls.start({ opacity: scrollY > 400 ? 1 : 0.1 }); // 스크롤 위치에 따라 opacity 조절
     };
 
     // 스크롤 이벤트 리스너 추가
@@ -34,9 +34,9 @@ function References() {
 
   return (
     <motion.div
-    initial={{ opacity: 0.5 }}
+    initial={{ opacity: 0.0 }}
     animate={controls}
-    transition={{ ease: "easeInOut", duration: 0.5 }}
+    transition={{ ease: "easeInOut", duration: 0.2 }}
     className="table_border"
   >
     <table className="caption-top table-borderless table-hover">
@@ -55,7 +55,7 @@ function References() {
           <td>
             <button type="button" className="copy_button" onClick={() => handleCopyClipBoard(document.getElementById("apaResult").innerHTML)}>
               <div>
-                <img class="copy_img" src={copy_img}/>
+                <img className="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
@@ -67,7 +67,7 @@ function References() {
           <td>
             <button type="button" className="copy_button" onClick={() => handleCopyClipBoard(document.getElementById("chicagoResult").innerHTML)}>
               <div>
-                <img class="copy_img" src={copy_img}/>
+                <img className="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
@@ -79,7 +79,7 @@ function References() {
           <td>
             <button type="button" className="copy_button" onClick={() => handleCopyClipBoard(document.getElementById("mlaResult").innerHTML)}>
               <div>
-                <img class="copy_img" src={copy_img}/>
+                <img className="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
@@ -92,7 +92,7 @@ function References() {
             <button type="button" className="copy_button"
             onClick={() => handleCopyClipBoard(document.getElementById("vancouverResult").innerHTML)}>
               <div>
-                <img class="copy_img" src={copy_img}/>
+                <img className="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
