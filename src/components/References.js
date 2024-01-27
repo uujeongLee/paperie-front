@@ -1,9 +1,30 @@
-import React, { Component, Fragment } from 'react';
+import React, {  useEffect, Component, Fragment } from 'react';
 import Button from 'react-bootstrap/Button';
 import "./table.css";
 import copy_img from "../assets/copy_img.png"
+import { motion, useAnimation } from 'framer-motion';
 
 function References() {
+
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // 스크롤 위치에 따라 애니메이션 컨트롤
+      const scrollY = window.scrollY;
+      controls.start({ opacity: scrollY > 400 ? 1 : 0.1 }); // 스크롤 위치에 따라 opacity 조절
+    };
+
+    // 스크롤 이벤트 리스너 추가
+    window.addEventListener('scroll', handleScroll);
+
+    // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [controls]);
+
+
   const handleCopyClipBoard = (text) => {
     try {
       navigator.clipboard.writeText(text);
@@ -14,7 +35,12 @@ function References() {
   };
 
   return (
-    <div className="table_border">
+    <motion.div
+    initial={{ opacity: 0.0 }}
+    animate={controls}
+    transition={{ ease: "easeInOut", duration: 0.2 }}
+    className="table_border"
+  >
     <table className="caption-top table-borderless table-hover">
     <caption className="refer_table_name"> 출처표기법 </caption>
       <thead>
@@ -31,7 +57,7 @@ function References() {
           <td>
             <button type="button" className="copy_button" onClick={() => handleCopyClipBoard(document.getElementById("apaResult").innerHTML)}>
               <div>
-                <img class="copy_img" src={copy_img}/>
+                <img className="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
@@ -43,7 +69,7 @@ function References() {
           <td>
             <button type="button" className="copy_button" onClick={() => handleCopyClipBoard(document.getElementById("chicagoResult").innerHTML)}>
               <div>
-                <img class="copy_img" src={copy_img}/>
+                <img className="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
@@ -55,7 +81,7 @@ function References() {
           <td>
             <button type="button" className="copy_button" onClick={() => handleCopyClipBoard(document.getElementById("mlaResult").innerHTML)}>
               <div>
-                <img class="copy_img" src={copy_img}/>
+                <img className="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
@@ -68,7 +94,7 @@ function References() {
             <button type="button" className="copy_button"
             onClick={() => handleCopyClipBoard(document.getElementById("vancouverResult").innerHTML)}>
               <div>
-                <img class="copy_img" src={copy_img}/>
+                <img className="copy_img" src={copy_img}/>
                 Copy
               </div>
             </button>
@@ -76,7 +102,7 @@ function References() {
         </tr>
       </tbody>
     </table>
-    </div>
+    </motion.div>
   );
 }
 

@@ -23,7 +23,7 @@ const Side = styled.div`
   flex-direction: column;
   align-items: center;
   width: 20%;
-  height: 110vh; /* 화면 전체 높이로 설정 */
+  height: 300vh; /* 화면 전체 높이로 설정 */
   //margin-right: 10%;
   background-color: white; /* 배경색을 여기에 지정하세요 */
 `;
