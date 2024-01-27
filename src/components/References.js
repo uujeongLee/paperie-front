@@ -1,10 +1,29 @@
-import React, { Component, Fragment } from 'react';
+import React, {  useEffect, Component, Fragment } from 'react';
 import Button from 'react-bootstrap/Button';
 import "./table.css";
 import copy_img from "../assets/copy_img.png"
+import { motion, useAnimation } from 'framer-motion';
 
 function References() {
-  const handleCopyClipBoard = (text: string) => {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // 스크롤 위치에 따라 애니메이션 컨트롤
+      const scrollY = window.scrollY;
+      controls.start({ opacity: scrollY > 50 ? 1 : 0.5 }); // 스크롤 위치에 따라 opacity 조절
+    };
+
+    // 스크롤 이벤트 리스너 추가
+    window.addEventListener('scroll', handleScroll);
+
+    // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [controls]);
+
+  const handleCopyClipBoard = (text) => {
     try {
       navigator.clipboard.writeText(text);
       alert('클립보드에 복사되었습니다.');
@@ -14,7 +33,12 @@ function References() {
   };
 
   return (
-    <div className="table_border">
+    <motion.div
+    initial={{ opacity: 0.5 }}
+    animate={controls}
+    transition={{ ease: "easeInOut", duration: 0.5 }}
+    className="table_border"
+  >
     <table className="caption-top table-borderless table-hover">
     <caption className="refer_table_name"> 출처표기법 </caption>
       <thead>
@@ -76,7 +100,7 @@ function References() {
         </tr>
       </tbody>
     </table>
-    </div>
+    </motion.div>
   );
 }
 
