@@ -4,7 +4,7 @@ import "./table.css";
 import copy_img from "../assets/copy_img.png"
 
 function References() {
-  const handleCopyClipBoard = (text: string) => {
+  const handleCopyClipBoard = (text) => {
     try {
       navigator.clipboard.writeText(text);
       alert('클립보드에 복사되었습니다.');
@@ -15,7 +15,7 @@ function References() {
 
   return (
     <div className="table_border">
-    <table className="caption-top table-borderless table-hover">
+    <table className="caption-top table-borderless table-hover" height="400px">
     <caption className="refer_table_name"> 출처표기법 </caption>
       <thead>
         <tr>
