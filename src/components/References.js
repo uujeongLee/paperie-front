@@ -4,7 +4,7 @@ import "./table.css";
 import copy_img from "../assets/copy_img.png"
 
 function References() {
-  const handleCopyClipBoard = (text: string) => {
+  const handleCopyClipBoard = (text) => {
     try {
       navigator.clipboard.writeText(text);
       alert('클립보드에 복사되었습니다.');

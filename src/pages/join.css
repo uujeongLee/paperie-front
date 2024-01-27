@@ -1,0 +1,19 @@
+.BoxStyle {
+  width: 845px;
+  padding: 30px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px -3px #B5B7C0;
+  outline: none;
+}
+
+inputBoxStyle{
+  width: 100px;
+  padding: 10px;
+  margin: 5px;
+  border: #000000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px -3px #B5B7C0;
+  outline: none;
+}

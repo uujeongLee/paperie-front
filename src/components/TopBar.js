@@ -1,12 +1,13 @@
 // src/components/TopBar.js
 
-import React, { Component } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-awesome-modal';
 import { Link } from "react-router-dom";
 import "./SignIn.css";
+import { useHistory } from "react-router-dom";
 
 const TopBarWrapper = styled.div`
   display: flex;
@@ -30,48 +31,44 @@ const TopBarWrapper = styled.div`
 // `
 
 
-class TopBar extends Component {
-  
-  constructor(props) {
-    super(props);
+const TopBar = () => {
+  const history = useHistory();
+  const [visible, setVisible] = useState(false);
 
-    this.state = {
-      visible : false
-    }
-  }
+  const openModal = () => {
+    setVisible(true);
+  };
 
-  openModal = function() {
-    this.setState({
-        visible : true
-    });
-  }
+  const closeModal = () => {
+    setVisible(false);
+  };
 
-  closeModal = function() {
-    this.setState({
-        visible : false
-    });
-  }
-  
+  const goToJoin = () => {
+    // "/join" 경로를 히스토리에 추가하여 회원가입 페이지로 이동
+    history.push("/join");
+  };
 
-  render() {
     return (
       <TopBarWrapper>
-        <Button variant="light" onClick={() => this.openModal()}>login</Button>&nbsp;
-          <Modal
-          visible={this.state.visible} 
-          width="400"
-          height="360"
-          effect="fadeInDown"
-          onClickAway={() => this.closeModal()}>
+      <Button variant="light" onClick={openModal}>login</Button>&nbsp;
+      <Modal
+        visible={visible} 
+        width="400"
+        height="360"
+        effect="fadeInDown"
+        onClickAway={closeModal}
+      >
             <div className="modal_container">
               <div>
                 <h4 className="login_title">로그인</h4>
-                <span className="close" onClick={() => this.closeModal()}>&times;</span>
+                <span className="close" onClick={closeModal}>&times;</span>
               </div>
               <div>
-                <p className="no_account">계정이 아직 없으신가요?</p>
-                <input type="button" className="signup" value="회원가입"/>
-              </div>
+          <p className="no_account">계정이 아직 없으신가요?</p>
+          <Link to="/join">
+              <Button className="signup" variant="light">회원가입</Button>
+            </Link>
+        </div>
               <form>
               <div className="login_div">
                   <div className="login_input_div">
@@ -112,8 +109,6 @@ class TopBar extends Component {
         <Button variant="light">mypage</Button>
       </TopBarWrapper>
     );
-  }
-
-};
+  };
 
 export default TopBar;
