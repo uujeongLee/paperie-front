@@ -36,8 +36,26 @@ class TopBar extends Component {
     super(props);
 
     this.state = {
-      visible : false
+      visible : false,
+      id : "",
+      password : "",
     }
+  }
+
+  _changeID = function() {
+    const id_v = document.getElementsByName('Id')[0].value;
+    
+    this.setState({
+      id : id_v
+    });
+  }
+
+  _changePW = function() {
+    const pw_v = document.getElementsByName("Pwd")[0].value;
+
+    this.setState({
+      password : pw_v
+    });
   }
 
   openModal = function() {
@@ -54,6 +72,7 @@ class TopBar extends Component {
   
 
   render() {
+    console.log('아이디 : ' + this.state.id + ', 비밀번호 : ' + this.state.password);
     return (
       <TopBarWrapper>
         <Button variant="light" onClick={() => this.openModal()}>login</Button>&nbsp;
@@ -80,7 +99,7 @@ class TopBar extends Component {
                     className="login_id"
                     type="text"
                     placeholder="아이디 혹은 이메일 주소"
-                    //onChange
+                    onChange={() => this._changeID()}
                     />
                   </div>
 
@@ -90,7 +109,7 @@ class TopBar extends Component {
                     className="login_pwd"
                     type="password"
                     placeholder="비밀번호"
-                    //onChange
+                    onChange={() => this._changePW()}
                     />
                   </div>
 
