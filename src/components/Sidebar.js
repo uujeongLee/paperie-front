@@ -3,6 +3,7 @@
 
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
 import SidebarItem from "./SidebarItem";
 import paperielogo from "../assets/paperielogo.png";
@@ -47,7 +48,7 @@ function Sidebar() {
   const menus = [
     { name: "논문", path: "/", icon: <BsFileEarmarkText />, arrowIcon: <HiOutlineArrowNarrowRight /> },
     { name: "책", path: "/mylist", icon: <IoBookOutline />, arrowIcon: <HiOutlineArrowNarrowRight /> },
-    { name: "기사", path: "/cashes", icon: <GrArticle />, arrowIcon: <HiOutlineArrowNarrowRight /> },
+    { name: "기사", path: "/article", icon: <GrArticle />, arrowIcon: <HiOutlineArrowNarrowRight /> },
     { name: "법", path: "/cashes", icon: <GoLaw />, arrowIcon: <HiOutlineArrowNarrowRight /> },
     { name: "Help", path: "/cashes", icon: <BiHelpCircle />, arrowIcon: <HiOutlineArrowNarrowRight /> }
   ];
