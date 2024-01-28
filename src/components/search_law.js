@@ -27,30 +27,30 @@ const Search_law = () => {
     cursor: "pointer",
   };
 
-
   const handleSearch = async () => {
     try {
-      // 백엔드 API 엔드포인트 URL
-      const apiUrl = 'http://127.0.0.1:8000/api/news?q={q}'; // 실제 백엔드 URL로 교체하세요
-  
       // 요청 페이로드
       const requestData = {
-        searchValue: searchValue,
+        q: searchValue,
         // 다른 필요한 데이터가 있다면 추가하세요
       };
-  
+
+      // 백엔드 API 엔드포인트 URL
+      const apiUrl = 'http://127.0.0.1:8000/api/news?q=' + encodeURIComponent(requestData.q);
+
       // 백엔드로 POST 요청 보내기
       const response = await axios.post(apiUrl, requestData);
-  
+
       // 백엔드 응답 처리 (필요시)
       console.log(response.data);
-  
+
       // 응답에 기반한 추가 작업이 필요하면 수행하세요
     } catch (error) {
       // 요청 중 발생한 오류 처리
       console.error('백엔드로 데이터를 전송하는 동안 오류 발생:', error.message);
     }
   };
+
   return (
     <>
       <h1>
@@ -78,5 +78,6 @@ const Search_law = () => {
 };
 
 export default Search_law;
+
 const root = createRoot(document.getElementById("root"));
 root.render(<Search_law />);
