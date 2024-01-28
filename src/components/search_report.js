@@ -3,6 +3,7 @@ import axios from "axios";
 import { createRoot } from "react-dom";
 import handImg from "../assets/handImg.png";
 import searchImg from "../assets/search.png";
+import "./search.css"
 
 const Search_report = () => {
   const [searchValue, setSearchValue] = useState("");

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { createRoot } from "react-dom";
 import styled from "styled-components";
-import "./join.css";
-import handImg from "../assets/handImg.png";
+import Join_hello from "../components/Join_hello";
 
 const Join = () => { 
   const HelloContainer = styled.div`
@@ -14,14 +13,7 @@ const Join = () => {
   };
 
   return (
-    <div className="BoxStyle">
-      <HelloContainer>
-        <h3>
-          안녕하세요, <img src={handImg} alt="hand" />
-        </h3>
-        <h3>회원가입하고 마이페이지 기능을 사용해 보세요!</h3>
-      </HelloContainer>
-    </div>
+        <Join_hello/>
   );
 };
 

@@ -1,0 +1,93 @@
+* {
+  font-family: 'Gmarket Sans', sans-serif;
+}
+
+.HelloText{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.BoxStyle {
+  width: 1000px;
+  padding: 100px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px -3px #B5B7C0;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.InputBoxStyle{
+  width: 400px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px -3px #B5B7C0;
+  outline: none;
+}
+
+.InputBoxStyle::placeholder {
+  color: #757575;
+  font-size: 14px;
+  font-family: 'Gmarket Sans', sans-serif;
+}
+
+.RedText{
+  font-size: 15px;
+  color: #F28F6B;
+  font-weight: bold;
+}
+
+.SignUpButton{
+  width: 200px;
+  background-color: #5577EF;
+  color: white; 
+  padding: 10px 15px; 
+  border: none; 
+  border-radius: 30px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  font-weight: bold;
+}
+
+.blueButton:hover {
+  background-color: #00539F; /* 마우스 호버 시 배경색 변경 */
+}
+
+.SignUpText{
+  color: white;
+  font-size: 15px;
+}
+.VerticalLine {
+  border-left: 1px solid black;
+  height: 70%;
+  position: absolute;
+  left: 65%;
+  transform: translateX(-50%);
+}
+
+.SocialText{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.Google{
+  width: 175px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.LeftContent {
+  padding-right: 5px;
+  flex-direction: column;
+}
+
+.RightContent {
+  padding-left: 210px;
+  align-items: center;
+}
