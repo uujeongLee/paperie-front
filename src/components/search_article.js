@@ -27,17 +27,16 @@ const Search_article = () => {
     cursor: "pointer",
   };
 
- 
   const handleSearch = async () => {
     try {
-      // 백엔드 API 엔드포인트 URL
-      const apiUrl = 'http://127.0.0.1:8000/api/news?q={q}'; // 실제 백엔드 URL로 교체하세요
-  
       // 요청 페이로드
       const requestData = {
         searchValue: searchValue,
         // 다른 필요한 데이터가 있다면 추가하세요
       };
+
+      // 백엔드 API 엔드포인트 URL
+      const apiUrl = 'http://127.0.0.1:8000/api/news?q=' + encodeURIComponent(requestData.searchValue);
   
       // 백엔드로 POST 요청 보내기
       const response = await axios.post(apiUrl, requestData);
