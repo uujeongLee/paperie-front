@@ -41,6 +41,7 @@ const Menu = styled.div`
 const activeStyle = {
   fontWeight: 'bold',
   textDecoration: "none"
+
 };
 
 function Sidebar() {
