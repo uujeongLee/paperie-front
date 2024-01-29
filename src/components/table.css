@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+body {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+
+}
+
+.table_border {
+    width: 850px;
+    height: 500px;
+    border: 1.3px solid #EEEEEE;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px -3px #B5B7C0;
+    position: absolute;
+    top: 200%;
+    background-color: white; 
+
+}
+
+td {
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 15px;
+
+}
+
+/* 출처표기법 */
+.refer_table_name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 33px;
+    /* identical to box height */
+    letter-spacing: -0.01em;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    color: black;
+
+}
+    
+.table_menu {
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    
+    color: #B5B7C0;
+    
+}
+    
+.refer_type {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 27px;
+    /* identical to box height */
+    letter-spacing: -0.01em;
+    
+    color: black;
+
+}
+
+.copy_button {
+  width : 80px;  
+  height: 30px;
+  font-size: 14px;
+  border: white;
+  background-color: white;
+
+}
+
+div {
+    display: flex;
+
+}
+
+.copy_img {
+    width: 21px;
+    height: 20px;
+    padding-right: 1px;
+}
